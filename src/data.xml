@@ -218,7 +218,6 @@
 		<event>Downwind - For the next round all players have -1 to their hide</event>
 		<event>Famine - Each player loses one token</event>
 		<event>Disease spreads - Each player rolls a die for each of their tokens, on a 6 that token is killed.</event>
-		<event>Déjà vu - All events are reshuffled</event>
 		<event>Heat Wave - All players movement is reduced by 1</event>
 		<event>Scorpions breed - All tokens on Desert hex's can't move for the next round</event>
 		<event>Twister - All tokens on the plains hex's can't move for the next round.</event>

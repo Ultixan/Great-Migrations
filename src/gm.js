@@ -3,7 +3,10 @@ var nextTurn;
 var karma;
 var karmaEvents;
 var safeEvents;
+var globalEvents;
 var dodotimer = 0;
+var doGlobal = 0;
+var globalKarma;
 
 function PickPlayers() {
 	var numplayers = document.getElementById("players").value;
@@ -41,15 +44,24 @@ function PickPlayers() {
 				races.splice(nextRace,1);
 				hadturn.push(race);
 				game.setAttribute("class",race);
-				DoKarma(race);
+				if(doGlobal == 1) {
+					globalKarma = function() {
+						document.getElementById("event").style.display = "none";
+						DoKarma(race);
+					}
+					GlobalEvent();
+					doGlobal = 0;
+				}
+				else {
+					DoKarma(race);
+				}
 				
-				//game logic goes here
-
 				if(hadturn.length == numplayers) {
 					nextRace = Math.floor(Math.random() * (hadturn.length - 1));
 					while(hadturn.length > 0)
 						races.push(hadturn.shift());
-					hadturn.clear();
+					doGlobal = 1;
+					alert("here");
 				}
 				else {
 					nextRace = Math.floor(Math.random() * races.length);
@@ -94,6 +106,12 @@ function Initialize(races) {
 	for(var i=0; i < safeKarma.length; ++i) {
 		safeEvents.push(safeKarma[i].firstChild.nodeValue);
 	}
+	
+	globalEvents = new Array();
+	var globals = xmlDoc.getElementsByTagName("globalevents")[0].getElementsByTagName("event");
+	for(var i=0; i < globals.length; ++i) {
+		globalEvents.push(globals[i].firstChild.nodeValue);
+	}
 }
 
 function DoKarma(race) {
@@ -136,4 +154,12 @@ function SkipTurn() {
 	document.getElementById("play_button").style.display = "block";
 	document.getElementById("skip_button").style.display = "none";
 	nextTurn();
+}
+
+function GlobalEvent() {
+	document.getElementById("karma_event").style.display = "none";
+	document.getElementById("give_karma").style.display = "none";
+	document.getElementById("karma_event").style.display = "none";
+	document.getElementById("event").style.display = "block";
+	document.getElementById("event_text").innerHTML = globalEvents[Math.floor(Math.random() * globalEvents.length)];
 }
