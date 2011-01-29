@@ -2,6 +2,8 @@ var selectRaces;
 var nextTurn;
 var karma;
 var karmaEvents;
+var safeEvents;
+var dodotimer = 0;
 
 function PickPlayers() {
 	var numplayers = document.getElementById("players").value;
@@ -80,11 +82,18 @@ function Initialize(races) {
 		for(var j=0; j < eventlist.length; ++j) {
 			var event = new Object();
 			event.title = eventlist[j].getElementsByTagName("title")[0].firstChild.nodeValue;
-			event.text = eventlist[j].getElementsByTagName("text")[0].firstChild.nodeValue
+			event.text = eventlist[j].getElementsByTagName("text")[0].firstChild.nodeValue;
+			event.action = eventlist[j].getElementsByTagName("action")[0].firstChild.nodeValue;
 			karmaEvents[races[i]].push(event);
 		}
 	}
 	giveKarma.innerHTML = builder;
+	
+	safeEvents = new Array();
+	var safeKarma = xmlDoc.getElementsByTagName("safekarma")[0].getElementsByTagName("text");
+	for(var i=0; i < safeKarma.length; ++i) {
+		safeEvents.push(safeKarma[i].firstChild.nodeValue);
+	}
 }
 
 function DoKarma(race) {
@@ -94,11 +103,15 @@ function DoKarma(race) {
 		var event = karmaEvents[race][Math.floor(Math.random() * karmaEvents[race].length)];
 		document.getElementById("karma_title").innerHTML = event.title;
 		document.getElementById("karma_text").innerHTML = event.text;
+		if(event.action == 1) {
+			document.getElementById("play_button").style.display = "none";
+			document.getElementById("skip_button").style.display = "block";
+		}
 		karma[race] = 0;
 	}
 	else {
 		document.getElementById("karma_title").innerHTML = "";
-		document.getElementById("karma_text").innerHTML = "";
+		document.getElementById("karma_text").innerHTML = safeEvents[Math.floor(Math.random() * safeEvents.length)];
 	}
 }
 
@@ -109,8 +122,18 @@ function EndKarma() {
 
 function SendKarma(race) {
 	var karmaHit = 1;
-	if(race == "dodo")
+	if(race == "dodo" && dodotimer == 0)
 		karmaHit *= 1.5;
+	
+	if(dodotimer > 0)
+		--dodotimer;
+	
 	karma[race] += karmaHit;
+	nextTurn();
+}
+
+function SkipTurn() {
+	document.getElementById("play_button").style.display = "block";
+	document.getElementById("skip_button").style.display = "none";
 	nextTurn();
 }

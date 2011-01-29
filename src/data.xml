@@ -3,46 +3,228 @@
 		<dodo>
 			<title>Eggs are eaten by lizard</title>
 			<text>None of your mating pairs may produce offspring this turn.</text>
+			<action>0</action>
 		</dodo>
 		<dodo>
 			<title>Food source is reduced</title>
 			<text>Choose one of your tokens and remove it from the board.</text>
+			<action>0</action>
 		</dodo>
 		<dodo>
 			<title>Heavy rains flood rivers blocking your way</title>
 			<text>You lose your turn.</text>
+			<action>1</action>
 		</dodo>
 		<dodo>
 			<title>Your luck improves...</title>
-			<text>Don't give bad Kharma for 2 turns.</text>
+			<text>Don't give increased bad Kharma for 2 turns.</text>
+			<action>2</action>
 		</dodo>
 		<dodo>
 			<title>Find a new friend?</title>
 			<text>Move your predator token onto one of your tokens.</text>
+			<action>0</action>
 		</dodo>
 		<dodo>
 			<title>Caught in quicksand</title>
 			<text>Your movement this turn is reduced by 2.</text>
+			<action>0</action>
 		</dodo>
 		<elephant_bird>
-			<title>Title</title>
-			<text>Text</text>
+			<title>Eggs don't hatch</title>
+			<text>None of your mating pairs may produce offspring this turn.</text>
+			<action>0</action>
+		</elephant_bird>
+		<elephant_bird>
+			<title>Caught in dense vegetation</title>
+			<text>You lose your turn.</text>
+			<action>1</action>
+		</elephant_bird>
+		<elephant_bird>
+			<title>Deforestation causes loss of habitat</title>
+			<text>Choose one of your tokens and remove it from the board.</text>
+			<action>0</action>
+		</elephant_bird>
+		<elephant_bird>
+			<title>Wounded by a predator</title>
+			<text>Jungle terrain has a penalty of -3 until the end of your next turn.</text>
+			<action>0</action>
+		</elephant_bird>
+		<elephant_bird>
+			<title>Spotted by a predator</title>
+			<text>Move your predator token onto one of your tokens</text>
+			<action>0</action>
+		</elephant_bird>
+		<elephant_bird>
+			<title>Find very sweet fruit </title>
+			<text>Lose 2 movement as you stop to eat.</text>
+			<action>0</action>
 		</elephant_bird>
 		<lesser_bilby>
-			<title>Title</title>
-			<text>Text</text>
+			<title>Predator catches your scent</title>
+			<text>Move your predator token onto one of your tokens</text>
+			<action>0</action>
+		</lesser_bilby>
+		<lesser_bilby>
+			<title>A Dingo ate my baby</title>
+			<text>None of your mating pairs may produce offspring this turn.</text>
+			<action>0</action>
+		</lesser_bilby>
+		<lesser_bilby>
+			<title>Flash Flood</title>
+			<text>You lose your turn.</text>
+			<action>1</action>
+		</lesser_bilby>
+		<lesser_bilby>
+			<title>Stuck in sandstorm</title>
+			<text>Choose one of your tokens and remove it from the board.</text>
+			<action>0</action>
+		</lesser_bilby>
+		<lesser_bilby>
+			<title>Sands shift revealing your location</title>
+			<text>No longer gain +2 hide until the end of your next turn.</text>
+			<action>0</action>
+		</lesser_bilby>
+		<lesser_bilby>
+			<title>Have to cross a dune</title>
+			<text>Lose 2 movement to get across</text>
+			<action>0</action>
 		</lesser_bilby>
 		<irish_elk>
-			<title>Title</title>
-			<text>Text</text>
+			<title>Alpha male is challenged by another</title>
+			<text>None of your mating pairs may produce offspring this turn.</text>
+			<action>0</action>
+		</irish_elk>
+		<irish_elk>
+			<title>Antler moulting season</title>
+			<text>Can't beat predators until the end of your next turn.</text>
+			<action>0</action>
+		</irish_elk>
+		<irish_elk>
+			<title>You lose footing on a ledge</title>
+			<text>Choose one of your tokens and remove it from the board.</text>
+			<action>0</action>
+		</irish_elk>
+		<irish_elk>
+			<title>Land slide blocks path with rocks</title>
+			<text>You lose your turn.</text>
+			<action>1</action>
+		</irish_elk>
+		<irish_elk>
+			<title>Moved into cave inhabited by your predator</title>
+			<text>Move your predator token onto one of your tokens</text>
+			<action>0</action>
+		</irish_elk>
+		<irish_elk>
+			<title>Stuck in an avalanche</title>
+			<text>Reduce movement by 2</text>
+			<action>0</action>
 		</irish_elk>
 		<mammoth>
-			<title>Title</title>
-			<text>Text</text>
+			<title>Male is infertile</title>
+			<text>None of your mating pairs may produce offspring this turn.</text>
+			<action>0</action>
+		</mammoth>
+		<mammoth>
+			<title>Stuck in a blizzard</title>
+			<text>You lose your turn.</text>
+			<action>1</action>
+		</mammoth>
+		<mammoth>
+			<title>Ice begins to melt</title>
+			<text>Choose one of your tokens and remove it from the board.</text>
+			<action>0</action>
+		</mammoth>
+		<mammoth>
+			<title>You can't find food and begin to weaken</title>
+			<text>Predators can kill your tokens with 1 hit until the end of your next turn.</text>
+			<action>0</action>
+		</mammoth>
+		<mammoth>
+			<title>Your predator is on higher ground and spots you</title>
+			<text>Move your predator token onto one of your tokens</text>
+			<action>0</action>
+		</mammoth>
+		<mammoth>
+			<title>Ice is slippery</title>
+			<text>lose 2 movement</text>
+			<action>0</action>
 		</mammoth>
 		<quagga>
-			<title>Title</title>
-			<text>Text</text>
+			<title>Predator kills young</title>
+			<text>None of your mating pairs may produce offspring this turn.</text>
+			<action>0</action>
+		</quagga>
+		<quagga>
+			<title>Drought</title>
+			<text>Choose one of your tokens and remove it from the board.</text>
+			<action>0</action>
+		</quagga>
+		<quagga>
+			<title>Bad thunder storm</title>
+			<text>You lose your turn.</text>
+			<action>1</action>
+		</quagga>
+		<quagga>
+			<title>Fatugued after being hunted</title>
+			<text>You no longer gain +2 speed for until the end of your next turn.</text>
+			<action>0</action>
+		</quagga>
+		<quagga>
+			<title>Voortrekkers advance onto your location</title>
+			<text>Move your predator token onto one of your tokens</text>
+			<action>0</action>
+		</quagga>
+		<quagga>
+			<title>The watering hole is empty</title>
+			<text>Lose 2 movement as you are dehydrated</text>
+			<action>0</action>
 		</quagga>
 	</badkarma>
+	<safekarma>
+		<text>Nothing happens this turn</text>
+		<text>You are safe... for now</text>
+		<text>The weather is feeling good today</text>
+		<text>Lovely scenery isn't it?</text>
+		<text>You feel like you are going to live forever</text>
+		<text>You are feeling lucky</text>
+		<text>What wonderful world</text>
+		<text>The world is just big enough</text>
+		<text>Love is in the air</text>
+		<text>You are walking on sunshine</text>
+		<text>It feels good</text>
+		<text>This is going to be easy</text>
+		<text>Time to get moving</text>
+		<text>WINNER! ... Just kidding</text>
+		<text>LOSER!! Dun dun dun ... just kidding</text>
+	</safekarma>
+	<globalevents>
+		<event>Earthquake - place 2 earthquake token between terrain cards</event>
+		<event>Volcano Erupts -  place a volcano token onto a terrain card</event>
+		<event>Global Warming - Ice caps melt (movement is at -3)</event>
+		<event>Ice Age - Desert freezes (movement is at -3 on Tundra)</event>
+		<event>Brush Fire - Plains are on fire! (movement is at -3)</event>
+		<event>Heavy rains - Jungles start to flood (movement is at -3)</event>
+		<event>Swarms of insects - Forests are overrun with insects (movement is at -3)</event>
+		<event>UFO - move one of each type of token if able from the middle</event>
+		<event>Heavy snow - Mountains are covered in a thick layer of snow (movement is at -3)</event>
+		<event>Hunting season - move the predator tokens one hex</event>
+		<event>Hibernation  - break up all mating pairs</event>
+		<event>Mating season - Make up a mating pair for each species</event>
+		<event>Good Weather - all terrain penalties are reduced by 1</event>
+		<event>Meteor shower - each player rolls a die for each of their tokens, on a one that token is killed</event>
+		<event>Baby boom - each player gets to place one of their tokens on their terrain if able</event>
+		<event>Solar Eclipse - For the next round all players have +1 to their hide</event>
+		<event>Downwind - For the next round all players have -1 to their hide</event>
+		<event>Famine - Each player loses one token</event>
+		<event>Disease spreads - Each player rolls a die for each of their tokens, on a 6 that token is killed.</event>
+		<event>Déjà vu - All events are reshuffled</event>
+		<event>Heat Wave - All players movement is reduced by 1</event>
+		<event>Scorpions breed - All tokens on Desert hex's can't move for the next round</event>
+		<event>Twister - All tokens on the plains hex's can't move for the next round.</event>
+		<event>Thunder Storm - All tokens on the mountain hex's can't move for the next round</event>
+		<event>Monkey's attack - All tokens on the jungle hex's can't move for the next round</event>
+		<event>Ice cracks - All tokens on the tundra hex's can't move for the next round</event>
+		<event>Vegetation thrives - All tokens on the Forest hex's can't move for the next round as they stop to eat.</event>
+	</globalevents>
 </gmdata>
