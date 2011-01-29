@@ -9,8 +9,8 @@ p {padding: 0; margin: 0;}
 #skip_button {display: none;}
 #play_button {display: block;}
 	
-div.dodo {background: #808000;}
-div.elephant_bird {background: #008000;}
+div.dodo {background: #008000;}
+div.elephant_bird {background: #808000;}
 div.lesser_bilby {background: #784421;}
 div.irish_elk {background: #4D4D4D;}
 div.mammoth {background: #008080;}
