@@ -30,7 +30,16 @@
 			</form>
 		</div>
 		<div id="game">
-		
+			<div id="karma_event">
+			
+				<button type="button" onclick="EndKarma();">Play</button>
+			</div>
+			<div id="give_karma">
+				
+			</div>
+			<div id="event">
+			
+			</div>
 		</div>
 	</body>
 </html>

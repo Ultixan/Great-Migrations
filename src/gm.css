@@ -1,6 +1,9 @@
 body {padding: 0; margin: 0;}
+button {margin: 0;}
 #races {display: none;}
-#game {height: 100%; width: 100%;}
+#game {height: 100%; width: 100%; display: none;}
+#give_karma {display: none;}
+#event {display: none;}
 	
 div.dodo {background: #004400;}
 div.elephant_bird {background: #00FF00;}
