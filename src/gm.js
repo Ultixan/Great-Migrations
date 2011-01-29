@@ -8,6 +8,7 @@ var dodotimer = 0;
 var doGlobal = 0;
 var globalKarma;
 var firstGlobal = 0;
+var dodoTurn = 0;
 
 function PickPlayers() {
 	var numplayers = document.getElementById("players").value;
@@ -45,6 +46,10 @@ function PickPlayers() {
 				races.splice(nextRace,1);
 				hadturn.push(race);
 				game.setAttribute("class",race);
+				if(race != "dodo")
+					dodoTurn = 0;
+				else
+					dodoTurn = 1;
 				if(doGlobal == 1) {
 					globalKarma = function() {
 						document.getElementById("event").style.display = "none";
@@ -140,7 +145,7 @@ function EndKarma() {
 
 function SendKarma(race) {
 	var karmaHit = 1;
-	if(race == "dodo" && dodotimer == 0)
+	if(dodoTurn == 1 && dodotimer == 0)
 		karmaHit *= 1.5;
 	
 	if(dodotimer > 0)
