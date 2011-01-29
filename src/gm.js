@@ -7,6 +7,7 @@ var globalEvents;
 var dodotimer = 0;
 var doGlobal = 0;
 var globalKarma;
+var firstGlobal = 0;
 
 function PickPlayers() {
 	var numplayers = document.getElementById("players").value;
@@ -79,7 +80,7 @@ function DisplayButtons(races) {
 
 function Initialize(races) {
 	var giveKarma = document.getElementById("give_karma");
-	var builder = "";
+	var builder = "<h1>Influene</h1><br/><p>Finish your turn and then select a species to send bad karma to:</p><br/>";
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("GET","data.xml",false);
 	xmlhttp.send(null);
@@ -87,7 +88,7 @@ function Initialize(races) {
 	karmaEvents = new Array(races.length);
 	var badKarma = xmlDoc.getElementsByTagName("badkarma")[0];
 	for(var i=0; i < races.length; ++i) {
-		builder += "<button type=\"button\" id=\"" + races[i] + "_button\" onclick=\"SendKarma('" + races[i] + "');\">" + races[i] + "</button>\n";
+		builder += "<button type=\"button\" id=\"" + races[i] + "_button\" onclick=\"SendKarma('" + races[i] + "');\">" + races[i] + "</button><br/>";
 		karmaEvents[races[i]] = new Array();
 		var eventlist = badKarma.getElementsByTagName(races[i]);
 		for(var j=0; j < eventlist.length; ++j) {
@@ -127,8 +128,8 @@ function DoKarma(race) {
 		karma[race] = 0;
 	}
 	else {
-		document.getElementById("karma_title").innerHTML = "";
-		document.getElementById("karma_text").innerHTML = safeEvents[Math.floor(Math.random() * safeEvents.length)];
+		document.getElementById("karma_title").innerHTML = safeEvents[Math.floor(Math.random() * safeEvents.length)];
+		document.getElementById("karma_text").innerHTML = "Nothing happens.";
 	}
 }
 
@@ -160,5 +161,11 @@ function GlobalEvent() {
 	document.getElementById("give_karma").style.display = "none";
 	document.getElementById("karma_event").style.display = "none";
 	document.getElementById("event").style.display = "block";
-	document.getElementById("event_text").innerHTML = globalEvents[Math.floor(Math.random() * globalEvents.length)];
+	if(firstGlobal == 1) {
+		document.getElementById("event_text").innerHTML = globalEvents[Math.floor(Math.random() * globalEvents.length)];
+	}
+	else {
+		document.getElementById("event_text").innerHTML = "The hunt begins - All players place their predators on the volcano";
+		firstGlobal = 1;
+	}
 }
