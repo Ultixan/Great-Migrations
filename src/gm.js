@@ -80,7 +80,7 @@ function DisplayButtons(races) {
 
 function Initialize(races) {
 	var giveKarma = document.getElementById("give_karma");
-	var builder = "<h1>Influene</h1><br/><p>Finish your turn and then select a species to send bad karma to:</p><br/>";
+	var builder = "<h1>Influence</h1><br/><p>Finish your turn and then select a species to send bad karma to:</p><br/>";
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("GET","data.xml",false);
 	xmlhttp.send(null);
