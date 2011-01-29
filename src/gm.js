@@ -1,6 +1,7 @@
 var selectRaces;
 var nextTurn;
 var karma;
+var karmaEvents;
 
 function PickPlayers() {
 	var numplayers = document.getElementById("players").value;
@@ -66,8 +67,22 @@ function DisplayButtons(races) {
 function Initialize(races) {
 	var giveKarma = document.getElementById("give_karma");
 	var builder = "";
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET","data.xml",false);
+	xmlhttp.send(null);
+	var xmlDoc = xmlhttp.responseXML;
+	karmaEvents = new Array(races.length);
+	var badKarma = xmlDoc.getElementsByTagName("badkarma")[0];
 	for(var i=0; i < races.length; ++i) {
-		builder += "<button type=\"button\" id=\"" + races[i] + "_button\" onclick=\"SendKarma('" + races[i] + "');\">" + races[i] + "</button>\n"
+		builder += "<button type=\"button\" id=\"" + races[i] + "_button\" onclick=\"SendKarma('" + races[i] + "');\">" + races[i] + "</button>\n";
+		karmaEvents[races[i]] = new Array();
+		var eventlist = badKarma.getElementsByTagName(races[i]);
+		for(var j=0; j < eventlist.length; ++j) {
+			var event = new Object();
+			event.title = eventlist[j].getElementsByTagName("title")[0].firstChild.nodeValue;
+			event.text = eventlist[j].getElementsByTagName("text")[0].firstChild.nodeValue
+			karmaEvents[races[i]].push(event);
+		}
 	}
 	giveKarma.innerHTML = builder;
 }
@@ -76,11 +91,14 @@ function DoKarma(race) {
 	document.getElementById("karma_event").style.display = "block";
 	document.getElementById("give_karma").style.display = "none";
 	if(karma[race] >= karma.length) {
-		alert("Ding ding!");
+		var event = karmaEvents[race][Math.floor(Math.random() * karmaEvents[race].length)];
+		document.getElementById("karma_title").innerHTML = event.title;
+		document.getElementById("karma_text").innerHTML = event.text;
 		karma[race] = 0;
 	}
 	else {
-		
+		document.getElementById("karma_title").innerHTML = "";
+		document.getElementById("karma_text").innerHTML = "";
 	}
 }
 

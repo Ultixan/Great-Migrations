@@ -1,0 +1,48 @@
+<gmdata>
+	<badkarma>
+		<dodo>
+			<title>Eggs are eaten by lizard</title>
+			<text>None of your mating pairs may produce offspring this turn.</text>
+		</dodo>
+		<dodo>
+			<title>Food source is reduced</title>
+			<text>Choose one of your tokens and remove it from the board.</text>
+		</dodo>
+		<dodo>
+			<title>Heavy rains flood rivers blocking your way</title>
+			<text>You lose your turn.</text>
+		</dodo>
+		<dodo>
+			<title>Your luck improves...</title>
+			<text>Don't give bad Kharma for 2 turns.</text>
+		</dodo>
+		<dodo>
+			<title>Find a new friend?</title>
+			<text>Move your predator token onto one of your tokens.</text>
+		</dodo>
+		<dodo>
+			<title>Caught in quicksand</title>
+			<text>Your movement this turn is reduced by 2.</text>
+		</dodo>
+		<elephant_bird>
+			<title>Title</title>
+			<text>Text</text>
+		</elephant_bird>
+		<lesser_bilby>
+			<title>Title</title>
+			<text>Text</text>
+		</lesser_bilby>
+		<irish_elk>
+			<title>Title</title>
+			<text>Text</text>
+		</irish_elk>
+		<mammoth>
+			<title>Title</title>
+			<text>Text</text>
+		</mammoth>
+		<quagga>
+			<title>Title</title>
+			<text>Text</text>
+		</quagga>
+	</badkarma>
+</gmdata>
