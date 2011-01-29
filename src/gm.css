@@ -1,1 +1,10 @@
+body {padding: 0; margin: 0;}
 #races {display: none;}
+#game {height: 100%; width: 100%;}
+	
+div.dodo {background: #004400;}
+div.elephant_bird {background: #00FF00;}
+div.lesser_bilby {background: #E3bE29;}
+div.irish_elk {background: #BBBBBB;}
+div.mammoth {background: #28EFDF;}
+div.quagga {background: #C38B05;}
