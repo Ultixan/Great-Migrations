@@ -61,7 +61,6 @@ function PickPlayers() {
 					while(hadturn.length > 0)
 						races.push(hadturn.shift());
 					doGlobal = 1;
-					alert("here");
 				}
 				else {
 					nextRace = Math.floor(Math.random() * races.length);
