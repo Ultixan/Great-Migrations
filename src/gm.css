@@ -1,17 +1,17 @@
-body {padding: 0; margin: 0;}
+body {padding: 0; margin: 0; height: 100%;}
 button {margin: 0;}
 h1 {padding: 0; margin: 0;}
 p {padding: 0; margin: 0;}
 #races {display: none;}
 #game {height: 100%; width: 100%; display: none;}
-#give_karma {display: none;}
+#give_karma {height: 100%; display: none;}
 #event {display: none;}
 #skip_button {display: none;}
 #play_button {display: block;}
 	
-div.dodo {background: #008000;}
-div.elephant_bird {background: #808000;}
-div.lesser_bilby {background: #784421;}
-div.irish_elk {background: #4D4D4D;}
-div.mammoth {background: #008080;}
-div.quagga {background: #D45005;}
+div.dodo {background: url('images/dodo.png') no-repeat bottom right #008000;}
+div.elephant_bird {background: url('images/elephant_bird.png') no-repeat bottom right #808000;}
+div.lesser_bilby {background: url('images/lesser_bilby.png') no-repeat bottom right #784421;}
+div.irish_elk {background: url('images/irish_elk.png') no-repeat bottom right #4D4D4D;}
+div.mammoth {background: url('images/mammoth.png') no-repeat bottom right #008080;}
+div.quagga {background: url('images/quagga.png') no-repeat bottom right #D45005;}
